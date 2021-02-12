@@ -1,0 +1,52 @@
+# -*- mode:org; -*-
+#+STARTUP: showall
+#+STARTUP: hidestars
+#+OPTIONS: toc:nil
+#+OPTIONS: skip:t
+#+STARTUP: indent
+#+OPTIONS: ^:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./org.css" />
+
+* Play Song Converter --------------------------------------------------
+https://www.sample-videos.com/
+
+* DONE Configuration Values (main.py)
+- Database filename and location
+- File location
+- Output location
+
+These can be at first static (hard coded)
+Then they can be set by prompting the user
+Lastly, they can be passed as arguments to the file
+
+For example,
+
+$ python main.py -d ./playTube.db -i ./input -o ./output
+
+
+* DONE Converter (converter.py)
+- Convert function
+  - convert_file_mp4_to_mp3(input_filename, output_filename)
+* DONE Datbase (db.py)
+- Open database
+- Read data
+  - SQL statement
+- Return data
+
+* Process (process.py)
+- For each row in database
+  - Get file
+  - Build output filename
+  - Convert file
+
+* TODO Command line parameters
+
+| -d | database_file    |
+| -i | input_directory  |
+| -o | output_directory |
+
+$ python 
+main.py
+ -d ./playTube.db -i ./input -o ./output
+
+For example,
